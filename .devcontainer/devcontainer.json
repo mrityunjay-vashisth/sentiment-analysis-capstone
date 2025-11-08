@@ -1,0 +1,35 @@
+{
+  "name": "Social Media Sentiment Analysis",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.formatting.provider": "black"
+      }
+    },
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "notebooks/01_data_cleaning.ipynb"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt && python -c 'import ssl; import nltk; ssl._create_default_https_context = ssl._create_unverified_context; nltk.download(\"punkt_tab\"); nltk.download(\"punkt\"); nltk.download(\"stopwords\"); nltk.download(\"wordnet\"); nltk.download(\"omw-1.4\"); nltk.download(\"vader_lexicon\")'",
+  "forwardPorts": [8501],
+  "portsAttributes": {
+    "8501": {
+      "label": "Streamlit",
+      "onAutoForward": "notify"
+    }
+  }
+}
