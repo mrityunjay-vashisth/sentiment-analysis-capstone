@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import re
 from typing import Iterable
+from multiprocessing import Pool, cpu_count
+import os
 
 import pandas as pd
 
@@ -58,10 +60,46 @@ def tokenize_and_lemmatize(text: str) -> str:
     return " ".join(processed)
 
 
-def preprocess_series(texts: Iterable[str]) -> list[str]:
-    ensure_nltk_resources()  # Call once for the entire series
-    normalized = [normalize_text(text) for text in texts]
-    lemmatized = [tokenize_and_lemmatize(text) for text in normalized]
+def _preprocess_batch(texts: list[str]) -> list[str]:
+    """Helper function for parallel processing."""
+    ensure_nltk_resources()  # Each process needs to ensure resources
+    return [tokenize_and_lemmatize(normalize_text(text)) for text in texts]
+
+
+def preprocess_series(texts: Iterable[str], use_multiprocessing: bool = True, n_jobs: int = None) -> list[str]:
+    """Preprocess a series of texts with optional multiprocessing.
+
+    Args:
+        texts: Iterable of text strings to preprocess
+        use_multiprocessing: Whether to use multiprocessing (default: True)
+        n_jobs: Number of parallel jobs. If None, uses all available CPUs
+    """
+    ensure_nltk_resources()  # Call once for the main process
+    texts_list = list(texts)
+
+    if not use_multiprocessing or len(texts_list) < 1000:
+        # For small datasets, single-threaded is faster
+        normalized = [normalize_text(text) for text in texts_list]
+        lemmatized = [tokenize_and_lemmatize(text) for text in normalized]
+        return lemmatized
+
+    # Use multiprocessing for large datasets
+    n_jobs = n_jobs or cpu_count()
+    chunk_size = max(1, len(texts_list) // (n_jobs * 4))  # Create 4x chunks per core
+
+    print(f"Preprocessing {len(texts_list):,} texts using {n_jobs} CPU cores...")
+
+    # Split texts into chunks
+    chunks = [texts_list[i:i + chunk_size] for i in range(0, len(texts_list), chunk_size)]
+
+    # Process chunks in parallel
+    with Pool(processes=n_jobs) as pool:
+        results = pool.map(_preprocess_batch, chunks)
+
+    # Flatten results
+    lemmatized = [item for sublist in results for item in sublist]
+    print(f"Preprocessing complete!")
+
     return lemmatized
 
 

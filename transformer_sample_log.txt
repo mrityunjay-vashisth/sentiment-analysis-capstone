@@ -1,0 +1,13 @@
+[nltk_data] Error loading punkt: <urlopen error [SSL:
+[nltk_data]     CERTIFICATE_VERIFY_FAILED] certificate verify failed:
+[nltk_data]     unable to get local issuer certificate (_ssl.c:1000)>
+[nltk_data] Error loading wordnet: <urlopen error [SSL:
+[nltk_data]     CERTIFICATE_VERIFY_FAILED] certificate verify failed:
+[nltk_data]     unable to get local issuer certificate (_ssl.c:1000)>
+[nltk_data] Error loading omw-1.4: <urlopen error [SSL:
+[nltk_data]     CERTIFICATE_VERIFY_FAILED] certificate verify failed:
+[nltk_data]     unable to get local issuer certificate (_ssl.c:1000)>
+Device set to use mps:0
+Processing 853 texts in 27 batches of 32...
+  Batch 27/27 (100.0%)
+Macro F1: 0.284
