@@ -46,7 +46,7 @@ class SentimentAnalyzer:
             self._analyzer = pipeline("sentiment-analysis", model=self.config.transformer_model)
         return self._analyzer
 
-    def predict_texts(self, texts: Sequence[str]) -> pd.DataFrame:
+    def predict_texts(self, texts: Sequence[str], batch_size: int = 32) -> pd.DataFrame:
         if not texts:
             return pd.DataFrame(columns=["sentiment_label", "confidence"])
         if self.config.mode == "vader":
@@ -56,9 +56,21 @@ class SentimentAnalyzer:
             confidences = [self._scores_to_confidence(score) for score in scores]
         elif self.config.mode == "transformer":
             analyzer = self._load_transformer()
-            outputs = analyzer(list(texts))
-            labels = [self._normalize_transformer_label(item["label"]) for item in outputs]
-            confidences = [float(item["score"]) for item in outputs]
+            # Process in batches to avoid memory issues
+            labels = []
+            confidences = []
+            texts_list = list(texts)
+            total_batches = (len(texts_list) + batch_size - 1) // batch_size
+
+            print(f"Processing {len(texts_list):,} texts in {total_batches:,} batches of {batch_size}...")
+            for i in range(0, len(texts_list), batch_size):
+                batch = texts_list[i:i + batch_size]
+                batch_num = i // batch_size + 1
+                if batch_num % 100 == 0 or batch_num == total_batches:
+                    print(f"  Batch {batch_num:,}/{total_batches:,} ({(batch_num/total_batches)*100:.1f}%)")
+                outputs = analyzer(batch)
+                labels.extend([self._normalize_transformer_label(item["label"]) for item in outputs])
+                confidences.extend([float(item["score"]) for item in outputs])
         else:
             raise ValueError(f"Unsupported mode {self.config.mode}")
         return pd.DataFrame({"sentiment_label": labels, "confidence": confidences})
