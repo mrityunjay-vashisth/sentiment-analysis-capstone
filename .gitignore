@@ -34,6 +34,10 @@ data/processed/*.parquet
 # Keep directory structure
 !.gitkeep
 
+# Exception: Allow split data for Colab access (smaller files)
+!data/splits/clothing_reviews_train.csv
+!data/splits/clothing_reviews_test.csv
+
 # Outputs
 outputs/*.csv
 outputs/figures/*.png
