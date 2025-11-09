@@ -40,6 +40,12 @@ outputs/figures/*.png
 outputs/figures/*.jpg
 outputs/reports/*.pdf
 
+# Keep reports folder visualizations (needed for project)
+!reports/*.png
+!reports/*.jpg
+!reports/*.txt
+!reports/*.html
+
 # Jupyter Notebook
 .ipynb_checkpoints
 *.ipynb_checkpoints/

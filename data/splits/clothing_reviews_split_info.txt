@@ -1,0 +1,10 @@
+Train/Test Split Information
+==================================================
+
+original_dataset: data/processed/clothing_reviews.csv
+total_records: 22642
+train_records: 18113
+test_records: 4529
+test_size: 0.2
+random_state: 42
+stratified: True

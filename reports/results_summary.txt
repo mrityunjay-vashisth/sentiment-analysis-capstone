@@ -1,0 +1,28 @@
+======================================================================
+SENTIMENT ANALYSIS PROJECT - RESULTS SUMMARY
+======================================================================
+
+Generated: 2025-11-08 23:44:36
+
+
+VADER - Social Media
+----------------------------------------------------------------------
+Accuracy:  0.5778 (57.78%)
+Precision: 0.5610
+Recall:    0.5681
+F1-Score:  0.5623 (56.23%)
+
+✗ Target F1-score of 80% not met
+  Gap: 0.2377 (23.77 percentage points)
+  Progress: 70.3% of target
+
+VADER - Clothing Reviews
+----------------------------------------------------------------------
+Accuracy:  0.7812 (78.12%)
+Precision: 0.5642
+Recall:    0.3858
+F1-Score:  0.3882 (38.82%)
+
+✗ Target F1-score of 80% not met
+  Gap: 0.4118 (41.18 percentage points)
+  Progress: 48.5% of target

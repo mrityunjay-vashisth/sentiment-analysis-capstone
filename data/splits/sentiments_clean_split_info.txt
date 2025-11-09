@@ -1,0 +1,10 @@
+Train/Test Split Information
+==================================================
+
+original_dataset: data/processed/sentiments_clean.parquet
+total_records: 200222
+train_records: 160177
+test_records: 40045
+test_size: 0.2
+random_state: 42
+stratified: True
