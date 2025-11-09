@@ -16,8 +16,10 @@ Comprehensive analysis of 22,642 clothing reviews across multiple product catego
 
 | Notebook | View | Edit in Colab | Description |
 |----------|------|---------------|-------------|
-| **Clothing Brand Deep Dive EDA** | [📖 nbviewer](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Deep_Dive_EDA_executed.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Deep_Dive_EDA.ipynb) | Product category analysis, temporal trends, word clouds |
+| **Clothing Brand Deep Dive EDA** | [📖 nbviewer](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Deep_Dive_EDA_executed.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Deep_Dive_EDA_Colab.ipynb) | Product category analysis, temporal trends, word clouds |
 | **Clothing Sentiment Results** | [📖 nbviewer](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Sentiment_Results_executed.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Sentiment_Results.ipynb) | Model performance, confusion matrices, error analysis |
+
+**💡 Note:** The Colab notebooks automatically download data from GitHub - just click and run!
 
 ### Additional Analysis (Comparative Study):
 
