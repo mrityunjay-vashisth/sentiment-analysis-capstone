@@ -1,6 +1,31 @@
 # Social Media Sentiment Analysis
 
+[![View EDA Notebook](https://img.shields.io/badge/View-EDA%20Notebook-orange?logo=jupyter)](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/01_Exploratory_Data_Analysis_executed.ipynb)
+[![View Results Notebook](https://img.shields.io/badge/View-Results%20Analysis-blue?logo=jupyter)](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/02_Model_Results_Analysis_executed.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/01_Exploratory_Data_Analysis.ipynb)
+
 End-to-end pipeline for measuring public sentiment toward a product using social media datasets. The project covers ingestion, preprocessing, modeling, analytics, and interactive visualization.
+
+## 📊 Interactive Notebooks
+
+**View with all outputs and visualizations:**
+
+- **[Exploratory Data Analysis](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/01_Exploratory_Data_Analysis_executed.ipynb)** - Data exploration, word clouds, class distributions
+- **[Model Results Analysis](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/02_Model_Results_Analysis_executed.ipynb)** - Performance metrics, confusion matrices, error analysis
+
+**Or view directly on GitHub:**
+
+- [EDA Notebook](notebooks/01_Exploratory_Data_Analysis_executed.ipynb)
+- [Results Notebook](notebooks/02_Model_Results_Analysis_executed.ipynb)
+
+## 📈 Project Highlights
+
+- **200K+ Social Media Posts** analyzed with VADER sentiment analysis
+- **22K Clothing Reviews** for domain comparison
+- **15+ Publication-Quality Visualizations** (300 DPI)
+- **Comprehensive EDA** with word clouds and distribution analysis
+- **Proper Train/Test Splits** (80/20 stratified)
+- **Multi-Dataset Evaluation** showing domain adaptation challenges
 
 ## Features
 
@@ -91,6 +116,22 @@ streamlit run app/streamlit_app.py
 
 ## Notebooks
 
+**Comprehensive Analysis Notebooks (With Full Outputs):**
+- **`01_Exploratory_Data_Analysis_executed.ipynb`**: Complete EDA with 12+ visualizations including:
+  - Class distribution comparison (balanced vs imbalanced datasets)
+  - Text length analysis by sentiment
+  - Word clouds for each sentiment class (negative, neutral, positive)
+  - Train/test split verification charts
+
+- **`02_Model_Results_Analysis_executed.ipynb`**: Full results analysis with:
+  - Enhanced confusion matrices with percentages
+  - Per-class performance metrics (Precision, Recall, F1-Score)
+  - Model comparison across datasets
+  - Progress visualization toward target metrics
+  - Confidence score distributions
+  - Detailed error analysis
+
+**Legacy Notebooks:**
 - `01_data_cleaning.ipynb`: exploratory data cleaning and augmentation.
 - `02_model_training.ipynb`: baseline and transformer experiments.
 - `03_visualization.ipynb`: prototype charting and narrative insights.
