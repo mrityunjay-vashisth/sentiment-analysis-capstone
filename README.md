@@ -8,15 +8,32 @@ End-to-end pipeline for measuring public sentiment toward a product using social
 
 ## 📊 Interactive Notebooks
 
-**View with all outputs and visualizations:**
+**✏️ Want to edit and run the notebooks?** See [EDITING_GUIDE.md](EDITING_GUIDE.md) for detailed instructions!
 
-- **[Exploratory Data Analysis](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/01_Exploratory_Data_Analysis_executed.ipynb)** - Data exploration, word clouds, class distributions
-- **[Model Results Analysis](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/02_Model_Results_Analysis_executed.ipynb)** - Performance metrics, confusion matrices, error analysis
+### Quick Access Options:
 
-**Or view directly on GitHub:**
+| Option | EDA Notebook | Results Notebook | Best For |
+|--------|-------------|------------------|----------|
+| **🚀 Run in Colab** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/01_Exploratory_Data_Analysis.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/02_Model_Results_Analysis.ipynb) | **Editing & running** |
+| **📖 View (nbviewer)** | [View EDA](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/01_Exploratory_Data_Analysis_executed.ipynb) | [View Results](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/02_Model_Results_Analysis_executed.ipynb) | **Reading only** |
+| **📁 GitHub** | [Open on GitHub](notebooks/01_Exploratory_Data_Analysis_executed.ipynb) | [Open on GitHub](notebooks/02_Model_Results_Analysis_executed.ipynb) | **Browsing code** |
 
-- [EDA Notebook](notebooks/01_Exploratory_Data_Analysis_executed.ipynb)
-- [Results Notebook](notebooks/02_Model_Results_Analysis_executed.ipynb)
+### What's in the Notebooks:
+
+- **01_Exploratory_Data_Analysis.ipynb**:
+  - Dataset overview and statistics
+  - Class distribution analysis (balanced vs imbalanced)
+  - Text length analysis by sentiment
+  - Word clouds for each sentiment class
+  - Train/test split verification
+
+- **02_Model_Results_Analysis.ipynb**:
+  - VADER model performance evaluation
+  - Enhanced confusion matrices with percentages
+  - Per-class metrics (Precision, Recall, F1-Score)
+  - Model comparison across datasets
+  - Confidence score distributions
+  - Error analysis and insights
 
 ## 📈 Project Highlights
 
@@ -66,14 +83,45 @@ project_root/
 
 ## Setup
 
-1. Create a virtual environment running Python 3.10 or newer.
-2. Install dependencies:
+### For Editing Notebooks (Local Development)
 
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/mrityunjay-vashisth/sentiment-analysis-capstone.git
+   cd sentiment-analysis-capstone
+   ```
+
+2. **Create a virtual environment:**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On macOS/Linux
+   # OR
+   venv\Scripts\activate     # On Windows
+   ```
+
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Download required NLTK assets inside the environment if prompted (punkt, stopwords, wordnet, vader_lexicon).
+4. **Launch Jupyter:**
+   ```bash
+   jupyter notebook
+   # Navigate to notebooks/ folder and open any .ipynb file
+   ```
+
+5. **Download required NLTK assets if prompted:**
+   - punkt, stopwords, wordnet, vader_lexicon
+
+**📖 For detailed editing instructions with multiple options (Colab, VS Code, etc.), see [EDITING_GUIDE.md](EDITING_GUIDE.md)**
+
+### For Running the Pipeline Only
+
+If you just want to run the sentiment analysis pipeline without editing:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Data Expectations
 
