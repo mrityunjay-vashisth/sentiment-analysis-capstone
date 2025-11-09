@@ -1,48 +1,61 @@
-# Social Media Sentiment Analysis
+# Clothing Brand Sentiment Analysis
 
-[![View EDA Notebook](https://img.shields.io/badge/View-EDA%20Notebook-orange?logo=jupyter)](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/01_Exploratory_Data_Analysis_executed.ipynb)
-[![View Results Notebook](https://img.shields.io/badge/View-Results%20Analysis-blue?logo=jupyter)](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/02_Model_Results_Analysis_executed.ipynb)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/01_Exploratory_Data_Analysis.ipynb)
+[![View Clothing EDA](https://img.shields.io/badge/View-Clothing%20EDA-orange?logo=jupyter)](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Deep_Dive_EDA_executed.ipynb)
+[![View Results](https://img.shields.io/badge/View-Model%20Results-blue?logo=jupyter)](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Sentiment_Results_executed.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Deep_Dive_EDA.ipynb)
 
-End-to-end pipeline for measuring public sentiment toward a product using social media datasets. The project covers ingestion, preprocessing, modeling, analytics, and interactive visualization.
+**In-depth sentiment analysis of clothing brand customer reviews using VADER and transformer models.**
 
-## 📊 Interactive Notebooks
+Comprehensive analysis of 22,642 clothing reviews across multiple product categories, featuring temporal trend analysis, category performance metrics, and detailed sentiment classification. The project demonstrates NLP techniques for e-commerce customer feedback analysis with actionable business insights.
+
+## 📊 Clothing Brand Analysis Notebooks
 
 **✏️ Want to edit and run the notebooks?** See [EDITING_GUIDE.md](EDITING_GUIDE.md) for detailed instructions!
 
-### Quick Access Options:
+### Primary Analysis (Clothing Brand Focus):
 
-| Option | EDA Notebook | Results Notebook | Best For |
-|--------|-------------|------------------|----------|
-| **🚀 Run in Colab** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/01_Exploratory_Data_Analysis.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/02_Model_Results_Analysis.ipynb) | **Editing & running** |
-| **📖 View (nbviewer)** | [View EDA](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/01_Exploratory_Data_Analysis_executed.ipynb) | [View Results](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/02_Model_Results_Analysis_executed.ipynb) | **Reading only** |
-| **📁 GitHub** | [Open on GitHub](notebooks/01_Exploratory_Data_Analysis_executed.ipynb) | [Open on GitHub](notebooks/02_Model_Results_Analysis_executed.ipynb) | **Browsing code** |
+| Notebook | View | Edit in Colab | Description |
+|----------|------|---------------|-------------|
+| **Clothing Brand Deep Dive EDA** | [📖 nbviewer](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Deep_Dive_EDA_executed.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Deep_Dive_EDA.ipynb) | Product category analysis, temporal trends, word clouds |
+| **Clothing Sentiment Results** | [📖 nbviewer](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Sentiment_Results_executed.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/Clothing_Brand_Sentiment_Results.ipynb) | Model performance, confusion matrices, error analysis |
 
-### What's in the Notebooks:
+### Additional Analysis (Comparative Study):
 
-- **01_Exploratory_Data_Analysis.ipynb**:
-  - Dataset overview and statistics
-  - Class distribution analysis (balanced vs imbalanced)
-  - Text length analysis by sentiment
-  - Word clouds for each sentiment class
-  - Train/test split verification
+| Notebook | View | Description |
+|----------|------|-------------|
+| **Multi-Dataset EDA** | [📖 View](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/01_Exploratory_Data_Analysis_executed.ipynb) | Comparison of clothing vs social media data |
+| **Comparative Results** | [📖 View](https://nbviewer.org/github/mrityunjay-vashisth/sentiment-analysis-capstone/blob/main/notebooks/02_Model_Results_Analysis_executed.ipynb) | Model performance across domains |
 
-- **02_Model_Results_Analysis.ipynb**:
-  - VADER model performance evaluation
-  - Enhanced confusion matrices with percentages
-  - Per-class metrics (Precision, Recall, F1-Score)
-  - Model comparison across datasets
-  - Confidence score distributions
-  - Error analysis and insights
+### What's in the Clothing Analysis:
+
+**🔍 Clothing Brand Deep Dive EDA:**
+- 22,642 customer reviews across 15+ product categories
+- Temporal sentiment trends (monthly patterns)
+- Category-wise sentiment distribution (Dresses, Tops, Bottoms, etc.)
+- Review length and word count analysis
+- Sentiment-specific word clouds
+- Top performing vs struggling categories
+- Customer satisfaction heatmaps
+
+**📈 Clothing Sentiment Results:**
+- VADER model performance (Accuracy, Precision, Recall, F1)
+- Enhanced confusion matrices with misclassification analysis
+- Per-category performance metrics
+- Confidence score distribution
+- Sample error analysis with actual reviews
+- Actionable recommendations for improvement
 
 ## 📈 Project Highlights
 
-- **200K+ Social Media Posts** analyzed with VADER sentiment analysis
-- **22K Clothing Reviews** for domain comparison
-- **15+ Publication-Quality Visualizations** (300 DPI)
-- **Comprehensive EDA** with word clouds and distribution analysis
-- **Proper Train/Test Splits** (80/20 stratified)
-- **Multi-Dataset Evaluation** showing domain adaptation challenges
+- **22,642 Clothing Brand Reviews** - Comprehensive customer feedback analysis
+- **15+ Product Categories** - Dresses, Tops, Bottoms, Intimate, Jackets, and more
+- **20+ Publication-Quality Visualizations** (300 DPI)
+- **Temporal Trend Analysis** - Monthly sentiment patterns over time
+- **Category Performance Metrics** - Identify top and struggling product lines
+- **Proper Train/Test Splits** (80/20 stratified, 18K train / 4.5K test)
+- **Multiple Sentiment Models** - VADER + Transformer approaches
+- **Actionable Business Insights** - Data-driven recommendations for improvement
+- **200K+ Social Media Data** - Additional dataset for comparative analysis
 
 ## Features
 
